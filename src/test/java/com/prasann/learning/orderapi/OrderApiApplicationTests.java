@@ -1,4 +1,4 @@
-package com.prasann.learning.order_api;
+package com.prasann.learning.orderapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
