@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.prasann.learning.orderapi.model.Order;
 import com.prasann.learning.orderapi.service.OrderService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RestController 
@@ -27,6 +30,11 @@ public class OrderController {
     @GetMapping("/{id}")
     public Order getOrder(@PathVariable Long id) {
         return orderService.getOrder(id);
+    }
+
+    @PostMapping
+    public Order createOrder(@RequestBody Order order) {
+        return orderService.createOrder(order.getCustomerName(), order.getStatus());
     }
     
 }
